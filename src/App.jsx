@@ -1,18 +1,16 @@
 import { Navigate, Outlet } from "react-router-dom";
 import "./App.css";
-import { Button } from "@/components/ui/button";
 import { useUser } from "@clerk/clerk-react";
+import Header from "./components/pages/Header";
 
 function App() {
   const { isSignedIn, isLoaded } = useUser();
 
-  if (!isSignedIn && isLoaded) {
-    return <Navigate to={"/auth/sign-in"} />;
-  }
-  return (
+  return !isSignedIn && isLoaded ? (
+    <Navigate to={"/auth/sign-in"} />
+  ) : (
     <>
-      <div>{"Let's the game begin"}</div>
-      <Button>Start</Button>
+      <Header />
       <Outlet />
     </>
   );
