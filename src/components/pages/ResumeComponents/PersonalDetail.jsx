@@ -1,8 +1,22 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { getResumeById } from "../../../server/getResume";
 
 const PersonalDetail = ({ resumeInfo }) => {
+  const { resumeId } = useParams();
+  // const [dbResume, setDbResume] = useState(null);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  // const fetchData = async () => {
+  //   const resumeData = await getResumeById(resumeId);
+  //   console.log("Abhishek ka data: ", resumeData);
+  //   setDbResume(resumeData);
+  // };
+
   return (
     <div>
       <h1

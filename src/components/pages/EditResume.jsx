@@ -5,7 +5,6 @@ import { getResumeById } from "../../server/getResume";
 import FormSection from "./FormSection";
 import ResumePreview from "./ResumePreview";
 import { ResumeContext } from "../../context/ResumeContext";
-
 const EditResume = () => {
   const { resumeId } = useParams();
   const [resumeInfo, setResumeInfo] = useState(null);

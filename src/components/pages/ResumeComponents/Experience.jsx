@@ -13,7 +13,7 @@ const Experience = ({ resumeInfo }) => {
           borderColor: resumeInfo?.themeColor,
         }}
       />
-      {resumeInfo?.experience.map((exp) => {
+      {resumeInfo?.experience?.map((exp) => {
         return (
           <div key={exp.id} className="my-5">
             <div className="flex justify-between">

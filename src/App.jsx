@@ -1,6 +1,7 @@
 import { Navigate, Outlet } from "react-router-dom";
 import { useUser } from "@clerk/clerk-react";
 import Header from "./components/pages/Header";
+import { Toaster } from "@/components/ui/sonner";
 
 function App() {
   const { isSignedIn, isLoaded } = useUser();
@@ -11,6 +12,7 @@ function App() {
     <>
       <Header />
       <Outlet />
+      <Toaster />
     </>
   );
 }
